@@ -1,4 +1,14 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Patch } from '@nestjs/common';
 
-@Controller('avatar')
-export class AvatarController {}
+@Controller('api/avatar')
+export class AvatarController {
+    @Get()
+    getAvatar() {
+        return 'This is the avatar endpoint';
+    }
+
+    @Patch()
+    updateAvatar() {
+        return 'This is the update avatar endpoint';
+    }
+}

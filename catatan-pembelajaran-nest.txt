@@ -1,0 +1,43 @@
+belajar memahami cara kerja nest js itu sendiri 
+
+app.module.ts itu adalah file paling utama atau module paling utama bisa dibilang sebagai getway 
+
+=============================== module ========================================
+lalu untuk mendaftarkan controller, service bahkan module semuanya di module file,
+file tersebut bisa sangat modular misalnya seperti dibawah, bisa menjadi sub module menjadi paling paling kecil dari file tersebut
+app.module.ts -> user.module.ts -> profile.module.ts
+
+module generate
+untuk mengenerate module anda bisa menggunakan fitur nest js CLI tapi harus menginstall nya via globar agar bisa bekerja, di nest js untuk membuat file tersebut cukup gunakan perintah di CLI/terminal : 
+nest generate module nama_module
+real case
+nest generate module user
+
+cara singkat 
+nest g m nama_module
+real case
+nest g m user
+
+jika berhasil akan membuat file module dan folder, hal ini sudah secara default membuat folder juga
+
+
+=============================== controller ========================================
+controller disini untuk menuliskan logika pengontrol logika dari sebuah app, disini juga langsung menuliskan route mana untuk function mana yang akan terlibat, misalnya decorator @Get('/api/user') jika ditempatkan di atas function tersebut maka url enpoint route tersebut akan mengarahkan ke function tersebut yang berada di bawahnya
+
+lalu ada juga decorator @controller() parameter bisa kosong atau ada isinya tidak wajib
+
+
+=============================== decorator ========================================
+di nest js sangat sering berkaitan dengan decorator adalah ssebuah function helper untuk mempermudah
+
+daftar decorator yang akan sering dijumpai di nest js 
+@controller('path-url-optional')        => ini untuk controller 
+
+HTTP method sering digunakan 
+@Get('path-url-optional')               => GET
+@Post('path-url-optional')              => POST
+@Delete('path-url-optional')            => DELETE
+@Put('path-url-optional')               => PUT
+@Patch('path-url-optional')             => PATCH
+@option('path-url-optional')            => OPTION
+@query('path-url-optional')             => QUERY
