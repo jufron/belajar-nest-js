@@ -1,5 +1,7 @@
 belajar memahami cara kerja nest js itu sendiri 
 
+secara default berjalan di http://localhost:3000
+
 app.module.ts itu adalah file paling utama atau module paling utama bisa dibilang sebagai getway 
 
 =============================== module ========================================
@@ -41,3 +43,21 @@ HTTP method sering digunakan
 @Patch('path-url-optional')             => PATCH
 @option('path-url-optional')            => OPTION
 @query('path-url-optional')             => QUERY
+@all()                                  => semua HTTP method
+
+request data exxtactor (untuk mengambil data request) atau request decorator
+@Req()
+@Param('key')
+@Query('key')
+@Headers('key')
+@body('key')
+@Req() / @Request()
+@Ip()
+@HostParam()                            => untuk request host 
+
+decorator HTTP response 
+@Res()
+@HttpCode(code)
+@Header(key, value)
+@redirect(location, code)
+@Next                                   => untuk express.nextfunction
