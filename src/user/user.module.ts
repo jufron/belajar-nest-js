@@ -7,7 +7,7 @@ import { ProfileController } from './profile/profile.controller';
       imports: [],
       controllers: [
         UserController, 
-        AvatarController, 
+        AvatarController,
         ProfileController
     ],
       providers: [],
